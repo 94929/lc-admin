@@ -45,5 +45,7 @@ yanr start
 <br>
 UI 라이브러리 : [Antd](https://ant.design/components/overview/)
 <br>
+CSS 라이브러리 : [tailwind](https://tailwindcss.com/)
+<br>
 상태관리 라이브러리 : [Zustand](https://zustand-demo.pmnd.rs/)
 
