@@ -1,0 +1,37 @@
+@import "tailwind-preflight.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .m-0-auto {
+    margin: 0 auto;
+  }
+
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flex-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-col-between-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
