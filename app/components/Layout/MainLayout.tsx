@@ -1,22 +1,24 @@
 "use client";
 
 import React from "react";
-import Sider from "@/app/components/Sider";
-import { Breadcrumb, Layout, theme } from "antd";
+import { Layout, theme } from "antd";
 import AntdConfigProvider from "@/app/lib/AntdConfigProvider";
+import Header from "@/app/components/Header";
+import Sider from "@/app/components/Sider";
 
-const { Header, Content } = Layout;
+const { Content } = Layout;
 
 function MainLayout({ children }: { children: React.ReactNode }) {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+
   return (
     <AntdConfigProvider>
       <Layout hasSider style={{ minHeight: "100vh" }}>
         <Sider />
         <Layout>
-          <Header style={{ padding: 0, background: colorBgContainer }} />
+          <Header />
           <Content style={{ margin: "16px 16px" }}>
             <div
               style={{

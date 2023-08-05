@@ -1,9 +1,12 @@
-import React, { Fragment } from "react";
+import { Layout, theme } from "antd";
+const { Header: AntdHeader } = Layout;
 
-interface IHeader {}
+function Header() {
+  const {
+    token: { colorBgContainer },
+  } = theme.useToken();
 
-function Header({}: IHeader) {
-  return <Fragment>Header</Fragment>;
+  return <AntdHeader style={{ padding: 0, background: colorBgContainer }} />;
 }
 
 export default Header;
