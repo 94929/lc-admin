@@ -3,37 +3,44 @@
 
 ---
 
-### 1. 의존성 설치
+### 1. pnpm 설치
 ```
 
-yarn
+npm i -g pnpm
+
+```
+
+### 2. 의존성 설치
+```
+
+pnpm install
 
 ```
 
 ---
 
-### 2. 로컬서버 실행
+### 3. 로컬서버 실행
 ```
 
-yarn dev
+pnpm run dev
 
 ```
 
 ---
 
-### 3. 빌드
+### 4. 빌드
 
 ```
 
-yarn build
+pnpm run build
 
 ```
 ---
 
-### 4. 프로덕션 실행 (빌드 후 실행)
+### 5. 프로덕션 실행 (빌드 후 실행)
 ``` 
 
-yanr start
+pnpm run start
 
 ```
 

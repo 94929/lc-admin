@@ -3,14 +3,13 @@ import Button from "@/app/components/Button";
 import { Form } from "antd";
 import Input from "@/app/components/Input";
 import TextArea from "@/app/components/Input/TextArea";
+import { Fragment } from "react";
 
-interface INotificationSendComponent {
-  onSubmit: (data: any) => void;
-}
+function NotificationSendComponent({ onSubmit }: { onSubmit: () => void }) {
+  const [form] = Form.useForm();
 
-function NotificationSendComponent({ onSubmit }: INotificationSendComponent) {
   return (
-    <Form layout="vertical">
+    <Fragment>
       <div className="container">
         <div className="flex h-full">
           <div className="w-[30%] border-r p-3 mr-3">
@@ -46,7 +45,7 @@ function NotificationSendComponent({ onSubmit }: INotificationSendComponent) {
           </Button>
         </div>
       </div>
-    </Form>
+    </Fragment>
   );
 }
 
