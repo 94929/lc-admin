@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { CSSProperties, useState } from "react";
 import { LoadingOutlined, PlusOutlined } from "@ant-design/icons";
 import { message, Upload } from "antd";
 import type { UploadChangeParam } from "antd/es/upload";
 import type { RcFile, UploadFile, UploadProps } from "antd/es/upload/interface";
 
 interface IImageUploader extends UploadProps {
+  width?: CSSProperties["width"];
+  height?: CSSProperties["height"];
   onSuccess?: (data: any) => void;
   onFailed?: (err: any) => void;
 }
@@ -30,6 +32,8 @@ const beforeUpload = (file: RcFile) => {
 const ImageUploader = ({
   onSuccess = () => {},
   onFailed = () => {},
+  width = "auto",
+  height = "auto",
   ...rest
 }: IImageUploader) => {
   const [loading, setLoading] = useState(false);
@@ -61,21 +65,29 @@ const ImageUploader = ({
 
   return (
     <>
-      <Upload
-        accept="image/png, image/jpeg, image/jpg"
-        name="avatar"
-        listType="picture-card"
-        showUploadList={false}
-        beforeUpload={beforeUpload}
-        onChange={handleChange}
-        {...rest}
+      <div
+        style={{
+          width,
+          height,
+        }}
       >
-        {imageUrl ? (
-          <img src={imageUrl} alt="avatar" style={{ width: "100%" }} />
-        ) : (
-          uploadButton
-        )}
-      </Upload>
+        <Upload
+          accept="image/png, image/jpeg, image/jpg"
+          name="avatar"
+          listType="picture-card"
+          showUploadList={false}
+          beforeUpload={beforeUpload}
+          onChange={handleChange}
+          action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+          {...rest}
+        >
+          {imageUrl ? (
+            <img src={imageUrl} alt="avatar" style={{ width: "100%" }} />
+          ) : (
+            uploadButton
+          )}
+        </Upload>
+      </div>
     </>
   );
 };

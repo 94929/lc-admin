@@ -15,7 +15,9 @@ function Logo({}: ILogo) {
 
   return (
     <div className="text-[22px] flex-center h-[64px] text-gs_1">
-      <button onClick={onClick("/")}>LunChat Admin</button>
+      <div role="button" onClick={onClick("/")}>
+        LunChat Admin
+      </div>
     </div>
   );
 }

@@ -1,0 +1,10 @@
+@import "node_modules/antd/dist/reset.css";
+
+.ant-upload-wrapper {
+  height: 100% !important;
+}
+
+.ant-upload.ant-upload-select {
+  width: 100% !important;
+  height: 100% !important;
+}

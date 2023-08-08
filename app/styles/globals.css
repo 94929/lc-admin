@@ -1,4 +1,5 @@
 @import "tailwind-preflight.css";
+@import "antd-style.css";
 
 @tailwind base;
 @tailwind components;
