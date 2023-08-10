@@ -7,6 +7,7 @@ import { Fragment } from "react";
 import { Typography } from "antd";
 
 const { Title } = Typography;
+
 interface INotificationSendComponent {
   onSubmit: (data: any) => void;
 }
@@ -26,12 +27,12 @@ function NotificationSendComponent({ onSubmit }: INotificationSendComponent) {
     console.log("Failed:", errorInfo);
   };
 
-  const validateMessages = {
-    required: "'${name}' is required!",
+  const onSuccessImageUpload = (url: string) => {
+    form.setFieldValue("file_url", url);
   };
 
-  const onSuccessUpload = (url: string) => {
-    form.setFieldValue("file_url", url);
+  const validateMessages = {
+    required: "'${name}' is required!",
   };
 
   return (
@@ -42,6 +43,7 @@ function NotificationSendComponent({ onSubmit }: INotificationSendComponent) {
         <Form
           initialValues={{
             type: "typeA",
+            publisher: "로그인 된 유저 이메일을 가져온다",
           }}
           validateMessages={validateMessages}
           form={form}
@@ -53,7 +55,10 @@ function NotificationSendComponent({ onSubmit }: INotificationSendComponent) {
           <div className="flex h-full mb-[50px]">
             <div className="w-[30%] border-r p-3 mr-3">
               <Form.Item label="Image" name="image">
-                <ImageUploader height="400px" onSuccess={onSuccessUpload} />
+                <ImageUploader
+                  height="400px"
+                  onSuccess={onSuccessImageUpload}
+                />
               </Form.Item>
             </div>
 
@@ -88,7 +93,7 @@ function NotificationSendComponent({ onSubmit }: INotificationSendComponent) {
                 required
                 rules={[{ required: true }]}
               >
-                <TextArea />
+                <TextArea rows={5} />
               </Form.Item>
               <Form.Item
                 label="타입"
@@ -101,6 +106,14 @@ function NotificationSendComponent({ onSubmit }: INotificationSendComponent) {
                   <Select.Option value="typeB">타입 B</Select.Option>
                   <Select.Option value="typeC">타입 C</Select.Option>
                 </Select>
+              </Form.Item>
+              <Form.Item
+                label="작성자"
+                name="publisher"
+                required
+                rules={[{ required: true }]}
+              >
+                <Input disabled />
               </Form.Item>
             </div>
           </div>

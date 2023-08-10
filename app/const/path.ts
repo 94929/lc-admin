@@ -1,6 +1,6 @@
 export const PATH = {
   MAIN: "/",
   DASHBOARD: "/dashboard",
-  NOTIFICATION: "/notification",
-  NOTIFICATION_SEND: "/notification/send",
+  EMAIL: "/email",
+  SEND_EMAIL: "/email/send",
 };

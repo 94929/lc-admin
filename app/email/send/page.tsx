@@ -1,7 +1,7 @@
 "use client";
 
 import MainLayout from "@/app/components/Layout/MainLayout";
-import NotificationSendContainer from "@/app/notification/send/NotificationSendConatiner";
+import NotificationSendContainer from "@/app/email/send/NotificationSendConatiner";
 
 function NotificationSendPage() {
   return (

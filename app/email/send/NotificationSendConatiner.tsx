@@ -1,4 +1,4 @@
-import NotificationSendComponent from "@/app/notification/send/NotificationSendComponent";
+import NotificationSendComponent from "@/app/email/send/NotificationSendComponent";
 import { Form, message } from "antd";
 import { Fragment } from "react";
 

@@ -59,8 +59,8 @@ function Sider() {
   };
 
   const pathAndOpenKeyMap = {
-    [PATH.NOTIFICATION]: openMenuKeyMap.NOTIFICATION_MENU,
-    [PATH.NOTIFICATION_SEND]: openMenuKeyMap.NOTIFICATION_MENU,
+    [PATH.EMAIL]: openMenuKeyMap.NOTIFICATION_MENU,
+    [PATH.SEND_EMAIL]: openMenuKeyMap.NOTIFICATION_MENU,
   };
 
   const items: MenuItem[] = [
@@ -71,20 +71,20 @@ function Sider() {
       onClick: onClickLink(PATH.DASHBOARD),
     }),
     getItem({
-      label: "DB",
+      label: "Admin -> User",
       key: openMenuKeyMap.NOTIFICATION_MENU,
       icon: <HddOutlined />,
       children: [
         getItem({
-          label: "Noti",
-          key: PATH.NOTIFICATION,
-          onClick: onClickLink(PATH.NOTIFICATION),
+          label: "E-Mail",
+          key: PATH.EMAIL,
+          onClick: onClickLink(PATH.EMAIL),
           icon: <PieChartOutlined />,
         }),
         getItem({
-          label: "Noti-send",
-          key: PATH.NOTIFICATION_SEND,
-          onClick: onClickLink(PATH.NOTIFICATION_SEND),
+          label: "Send E-Mail",
+          key: PATH.SEND_EMAIL,
+          onClick: onClickLink(PATH.SEND_EMAIL),
           icon: <PieChartOutlined />,
         }),
       ],
