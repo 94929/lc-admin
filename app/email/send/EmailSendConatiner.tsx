@@ -1,8 +1,8 @@
-import NotificationSendComponent from "@/app/email/send/NotificationSendComponent";
-import { Form, message } from "antd";
 import { Fragment } from "react";
+import { message } from "antd";
+import EmailSendComponent from "@/app/email/send/EmailSendComponent";
 
-function NotificationSendContainer() {
+function EmailSendContainer() {
   const [messageApi, contextHolder] = message.useMessage();
 
   const onSubmit = (data: any) => {
@@ -26,9 +26,9 @@ function NotificationSendContainer() {
   return (
     <Fragment>
       {contextHolder}
-      <NotificationSendComponent onSubmit={onSubmit} />
+      <EmailSendComponent onSubmit={onSubmit} />
     </Fragment>
   );
 }
 
-export default NotificationSendContainer;
+export default EmailSendContainer;

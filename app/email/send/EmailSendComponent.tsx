@@ -4,15 +4,12 @@ import { Form, Select } from "antd";
 import Input from "@/app/components/Input";
 import TextArea from "@/app/components/Input/TextArea";
 import { Fragment } from "react";
-import { Typography } from "antd";
-
-const { Title } = Typography;
 
 interface INotificationSendComponent {
   onSubmit: (data: any) => void;
 }
 
-function NotificationSendComponent({ onSubmit }: INotificationSendComponent) {
+function EmailSendComponent({ onSubmit }: INotificationSendComponent) {
   const [form] = Form.useForm();
 
   const onClickSend = () => {
@@ -38,8 +35,6 @@ function NotificationSendComponent({ onSubmit }: INotificationSendComponent) {
   return (
     <Fragment>
       <div className="container">
-        <Title level={3}>Notification Send</Title>
-
         <Form
           initialValues={{
             type: "typeA",
@@ -54,7 +49,7 @@ function NotificationSendComponent({ onSubmit }: INotificationSendComponent) {
         >
           <div className="flex h-full mb-[50px]">
             <div className="w-[30%] border-r p-3 mr-3">
-              <Form.Item label="Image" name="image">
+              <Form.Item label="Image">
                 <ImageUploader
                   height="400px"
                   onSuccess={onSuccessImageUpload}
@@ -134,4 +129,4 @@ function NotificationSendComponent({ onSubmit }: INotificationSendComponent) {
   );
 }
 
-export default NotificationSendComponent;
+export default EmailSendComponent;

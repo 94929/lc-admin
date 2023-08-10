@@ -1,14 +1,14 @@
 "use client";
 
 import MainLayout from "@/app/components/Layout/MainLayout";
-import NotificationSendContainer from "@/app/email/send/NotificationSendConatiner";
+import EmailSendContainer from "@/app/email/send/EmailSendConatiner";
 
-function NotificationSendPage() {
+function EmailSendPage() {
   return (
     <MainLayout>
-      <NotificationSendContainer />
+      <EmailSendContainer />
     </MainLayout>
   );
 }
 
-export default NotificationSendPage;
+export default EmailSendPage;

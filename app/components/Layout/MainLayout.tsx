@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Layout, theme } from "antd";
-import AntdConfigProvider from "@/app/lib/AntdConfigProvider";
+import AntdConfigProvider from "@/app/components/Provider/AntdConfigProvider";
 import Header from "@/app/components/Header";
 import Sider from "@/app/components/Sider";
 

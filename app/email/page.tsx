@@ -2,7 +2,7 @@
 
 import MainLayout from "@/app/components/Layout/MainLayout";
 
-function NotificationPage() {
+function EmailPage() {
   return (
     <MainLayout>
       <p>NotificationPage</p>
@@ -10,4 +10,4 @@ function NotificationPage() {
   );
 }
 
-export default NotificationPage;
+export default EmailPage;

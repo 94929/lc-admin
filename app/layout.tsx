@@ -1,6 +1,7 @@
 import "./styles/globals.css";
 import type { Metadata } from "next";
-import StyledComponentsRegistry from "@/app/lib/AntdRegistry";
+import StyledComponentsRegistry from "@/app/components/Provider/AntdRegistry";
+import ReactQueryProvider from "@/app/components/Provider/ReactQueryProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <ReactQueryProvider>{children}</ReactQueryProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
