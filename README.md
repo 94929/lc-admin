@@ -54,5 +54,7 @@ UI 라이브러리 : [Antd](https://ant.design/components/overview/)
 <br>
 CSS 라이브러리 : [tailwind](https://tailwindcss.com/)
 <br>
-상태관리 라이브러리 : [Zustand](https://zustand-demo.pmnd.rs/)
+API 통신 라이브러리 : [react-query v4](https://tanstack.com/query/v4/docs/react/overview), [axios](https://axios-http.com/kr/docs/intro)
+<br>
+상태 관리 라이브러리 : [Zustand](https://zustand-demo.pmnd.rs/) (사용 예정)
 
