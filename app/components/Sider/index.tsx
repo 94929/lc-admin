@@ -5,7 +5,6 @@ import {
   HddOutlined,
   LineChartOutlined,
   PieChartOutlined,
-  TeamOutlined,
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Layout, Menu } from "antd";
