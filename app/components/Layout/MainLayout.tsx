@@ -25,7 +25,8 @@ function MainLayout({ children }: { children: React.ReactNode }) {
                 padding: 24,
                 height: "100%",
                 overflowY: "auto",
-                maxHeight: "calc(100vh - 100px)",
+                // 나중에 컨텐츠 영역 내부에서만 스크롤 됐으면 싶을 때 주석 풀어뵤세요
+                // maxHeight: "calc(100vh - 100px)",
                 minHeight: 360,
                 background: colorBgContainer,
               }}

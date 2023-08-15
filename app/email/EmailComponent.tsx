@@ -1,10 +1,24 @@
-import { Table, Tag, TagProps } from "antd";
+import { Table, Tag, TagProps, MenuProps, Dropdown } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import { TEmail, TEmails, TEmailType } from "@/app/types/email";
-
+import { MoreOutlined } from "@ant-design/icons";
+import BasicPagination from "@/app/components/Pagination";
+import BasicTable from "@/app/components/Table";
 interface IEmailComponent {
   emails: TEmails;
 }
+
+const getDropdownItem = (id: string): MenuProps["items"] => {
+  return [
+    {
+      key: "1",
+      label: "이동",
+      onClick: () => {
+        console.log("@@data id ", id);
+      },
+    },
+  ];
+};
 
 const columns: ColumnsType<TEmail> = [
   {
@@ -85,12 +99,37 @@ const columns: ColumnsType<TEmail> = [
     ellipsis: true,
     render: (_, { createdAt }) => <span>{createdAt}</span>,
   },
+  {
+    title: "",
+    dataIndex: "",
+    key: "",
+    width: 80,
+    ellipsis: true,
+    render: (_, { id }) => (
+      <span>
+        <Dropdown
+          placement="bottomLeft"
+          arrow
+          menu={{
+            items: getDropdownItem(id),
+          }}
+        >
+          <MoreOutlined role="button" />
+        </Dropdown>
+      </span>
+    ),
+  },
 ];
 
 function EmailComponent({ emails }: IEmailComponent) {
   return (
     <>
-      <Table columns={columns} dataSource={emails} />
+      <div className="mb-[20px]">
+        <BasicTable columns={columns} dataSource={emails} />
+      </div>
+      <div className="flex-center">
+        <BasicPagination />
+      </div>
     </>
   );
 }
